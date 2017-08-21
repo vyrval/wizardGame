@@ -5,7 +5,6 @@ using UnityEngine;
 public class playerController : MonoBehaviour {
 
     public float speed;
-    public spawnerTir spawn;
 
     private Vector3 lastdir;
     Rigidbody playerRig;

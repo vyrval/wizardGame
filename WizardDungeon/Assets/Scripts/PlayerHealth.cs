@@ -16,11 +16,13 @@ public class PlayerHealth : MonoBehaviour {
     playerController playerMovement;
     bool isDead;
     bool damaged;
+    PlayerShooting playerShooting;
 
     private void Awake()
     {
         playerMovement = GetComponent<playerController>();
         currentHealth = startingHealth;
+        playerShooting = GetComponentInChildren<PlayerShooting>();
     }
 	
 	// Update is called once per frame
@@ -51,7 +53,7 @@ public class PlayerHealth : MonoBehaviour {
     private void Death()
     {
         isDead = true;
-
+        playerShooting.DisableEffects();
         playerMovement.enabled = false;
     }
 }
