@@ -32,13 +32,12 @@ public class tirMovement : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(gameObject.name + " hit " + other.gameObject.name);
-
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         if(enemyHealth != null)
         {
-            enemyHealth.TakeDamage(damagePoint);
-            Destroy(gameObject);
+            enemyHealth.TakeDamage(damagePoint);            
         }
+        Destroy(gameObject);
 
     }
 }

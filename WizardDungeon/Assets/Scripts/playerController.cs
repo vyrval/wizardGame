@@ -28,12 +28,6 @@ public class playerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            spawn.fireIt();
-            //Debug.Log("player position " + transform.position);
-
-        }
 
     }
 

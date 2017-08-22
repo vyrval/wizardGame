@@ -10,7 +10,6 @@ public class PlayerShooting : MonoBehaviour {
     public GameObject projectileTemplate;
 
     float timer;
-    int shootableMask;
     ParticleSystem mParticles;
     Light mLight;
     float effectsDisplayTime = 0.2f;
@@ -18,7 +17,6 @@ public class PlayerShooting : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        shootableMask = LayerMask.GetMask("Shootable");
         mParticles = GetComponent<ParticleSystem>();
         mLight = GetComponent<Light>();
         playerHealth = GetComponentInParent<PlayerHealth>();
