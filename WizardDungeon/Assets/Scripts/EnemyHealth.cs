@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour {
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 2.5f;
-
+    public int experienceValue = 10;
 
     CapsuleCollider capsuleCollider;
     bool isDead;
@@ -48,6 +48,8 @@ public class EnemyHealth : MonoBehaviour {
         isDead = true;
         capsuleCollider.isTrigger = true;
 
+        ExperienceManager.currentExperience += (uint)experienceValue;
+        Debug.Log(gameObject.name + "'s exp value = " + experienceValue);
         StartSinking();
     }
 
